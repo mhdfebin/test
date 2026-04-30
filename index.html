@@ -1,337 +1,615 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+html
+
+<!DOCTYPE html>
+
+<html lang="en">
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.4">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Menlo; color: #0d0e11; -webkit-text-stroke: #0d0e11}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #2a2c33; -webkit-text-stroke: #2a2c33}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #db3f39; -webkit-text-stroke: #db3f39}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #a75705; -webkit-text-stroke: #a75705}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #42933e; -webkit-text-stroke: #42933e}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #0d0e11; -webkit-text-stroke: #0d0e11}
-    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #0d0e11; -webkit-text-stroke: #0d0e11; min-height: 15.0px}
-    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #8f9096; -webkit-text-stroke: #8f9096}
-    span.s1 {font-kerning: none; background-color: #f7f9fa}
-    span.s2 {font-kerning: none}
-    span.s3 {font-kerning: none; color: #2a2c33; -webkit-text-stroke: 0px #2a2c33}
-    span.s4 {font-kerning: none; color: #a75705; -webkit-text-stroke: 0px #a75705}
-    span.s5 {font-kerning: none; color: #42933e; -webkit-text-stroke: 0px #42933e}
-    span.s6 {font-kerning: none; color: #0d0e11; -webkit-text-stroke: 0px #0d0e11}
-    span.s7 {font-kerning: none; color: #db3f39; -webkit-text-stroke: 0px #db3f39}
-  </style>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>3D Facility – Badminton Courts, Meeting Rooms, Dance Rooms</title>
+
+    <style>
+
+        body { margin: 0; overflow: hidden; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+        #info {
+
+            position: absolute;
+
+            top: 20px;
+
+            left: 20px;
+
+            background: rgba(0,0,0,0.7);
+
+            color: white;
+
+            padding: 10px 15px;
+
+            border-radius: 8px;
+
+            pointer-events: none;
+
+            z-index: 10;
+
+            font-size: 14px;
+
+            backdrop-filter: blur(5px);
+
+        }
+
+        #controls-note {
+
+            position: absolute;
+
+            bottom: 20px;
+
+            left: 20px;
+
+            background: rgba(0,0,0,0.5);
+
+            color: #ccc;
+
+            padding: 5px 10px;
+
+            border-radius: 5px;
+
+            font-size: 12px;
+
+            pointer-events: none;
+
+        }
+
+    </style>
+
 </head>
+
 <body>
-<p class="p1"><span class="s1">html</span></p>
-<p class="p2"><span class="s2">&lt;!DOCTYPE html&gt;</span></p>
-<p class="p3"><span class="s3">&lt;</span><span class="s2">html </span><span class="s4">lang</span><span class="s3">=</span><span class="s5">"en"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s3">&lt;</span><span class="s2">head</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s6"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s7">meta </span><span class="s2">charset</span><span class="s3">=</span><span class="s5">"UTF-8"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s6"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s7">meta </span><span class="s4">name</span><span class="s3">=</span><span class="s2">"viewport"</span><span class="s7"> </span><span class="s4">content</span><span class="s3">=</span><span class="s2">"width=device-width, initial-scale=1.0"</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s7">title</span><span class="s3">&gt;</span><span class="s2">3D Facility – Badminton Courts, Meeting Rooms, Dance Rooms</span><span class="s3">&lt;/</span><span class="s7">title</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s6"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s2">style</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>body { margin: 0; overflow: hidden; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>#info {</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>position: absolute;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>top: 20px;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>left: 20px;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>background: rgba(0,0,0,0.7);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>color: white;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>padding: 10px 15px;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>border-radius: 8px;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>pointer-events: none;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>z-index: 10;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>font-size: 14px;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>backdrop-filter: blur(5px);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>#controls-note {</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>position: absolute;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>bottom: 20px;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>left: 20px;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>background: rgba(0,0,0,0.5);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>color: #ccc;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>padding: 5px 10px;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>border-radius: 5px;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>font-size: 12px;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>pointer-events: none;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p3"><span class="s6"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s2">style</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s3">&lt;/</span><span class="s2">head</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s3">&lt;</span><span class="s2">body</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s6"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s7">div </span><span class="s4">id</span><span class="s3">=</span><span class="s2">"info"</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s7">strong</span><span class="s3">&gt;</span><span class="s2">🏢 Facility 3D Layout</span><span class="s3">&lt;/</span><span class="s7">strong</span><span class="s3">&gt;&lt;</span><span class="s7">br</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>🏸 Badminton Court 1 (14x6m) | 🏸 Court 2 (14x5.5m)</span><span class="s3">&lt;</span><span class="s7">br</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>🪑 Meeting Room 1 (200m²) | 🪑 Meeting Room 2 (50m²)</span><span class="s3">&lt;</span><span class="s7">br</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>💃 Dance Room 1 &amp; 2 (55m² each) | 🏢 Office | 📋 Reception</span><span class="s3">&lt;</span><span class="s7">br</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>🚗 Outside Parking (15 cars)</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s7">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s6"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s7">div </span><span class="s4">id</span><span class="s3">=</span><span class="s2">"controls-note"</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>🖱️ Drag to rotate | Right‑click + drag to pan | Scroll to zoom</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s7">div</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s2"></span><br></p>
-<p class="p8"><span class="s6"><span class="Apple-converted-space">    </span></span><span class="s2"><i>&lt;!-- Import Three.js core and add-ons from CDN --&gt;</i><i></i></span></p>
-<p class="p5"><span class="s6"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s7">script </span><span class="s4">type</span><span class="s3">=</span><span class="s2">"importmap"</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>{</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>"imports": {</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">                </span>"three": "https://unpkg.com/three@0.128.0/build/three.module.js",</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">                </span>"three/addons/": "https://unpkg.com/three@0.128.0/examples/jsm/"</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p3"><span class="s6"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s2">script</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s2"></span><br></p>
-<p class="p5"><span class="s6"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s7">script </span><span class="s4">type</span><span class="s3">=</span><span class="s2">"module"</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>import * as THREE from 'three';</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>import { OrbitControls } from 'three/addons/controls/OrbitControls.js';</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';</span></p>
-<p class="p7"><span class="s2"></span><br></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>// --- Setup Scene, Cameras, Renderers ---</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>const scene = new THREE.Scene();</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>scene.background = new THREE.Color(0x111122);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>scene.fog = new THREE.FogExp2(0x111122, 0.008);</span></p>
-<p class="p7"><span class="s2"></span><br></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>// Perspective camera</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>camera.position.set(25, 18, 28);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>camera.lookAt(5, 0, 5);</span></p>
-<p class="p7"><span class="s2"></span><br></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>// WebGL renderer</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>const renderer = new THREE.WebGLRenderer({ antialias: true });</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>renderer.setSize(window.innerWidth, window.innerHeight);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>renderer.shadowMap.enabled = true; // enable shadows</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>renderer.shadowMap.type = THREE.PCFSoftShadowMap;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>document.body.appendChild(renderer.domElement);</span></p>
-<p class="p7"><span class="s2"></span><br></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>// CSS2 renderer for text labels</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>const labelRenderer = new CSS2DRenderer();</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>labelRenderer.setSize(window.innerWidth, window.innerHeight);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>labelRenderer.domElement.style.position = 'absolute';</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>labelRenderer.domElement.style.top = '0px';</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>labelRenderer.domElement.style.left = '0px';</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>labelRenderer.domElement.style.pointerEvents = 'none';</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>document.body.appendChild(labelRenderer.domElement);</span></p>
-<p class="p7"><span class="s2"></span><br></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>// --- Controls ---</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>const controls = new OrbitControls(camera, renderer.domElement);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>controls.enableDamping = true;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>controls.dampingFactor = 0.05;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>controls.rotateSpeed = 1.0;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>controls.zoomSpeed = 1.2;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>controls.panSpeed = 0.8;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>controls.target.set(8, 1, 6);</span></p>
-<p class="p7"><span class="s2"></span><br></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>// --- Lighting ---</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>// Ambient light</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>const ambientLight = new THREE.AmbientLight(0x404060);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>scene.add(ambientLight);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>// Main directional light (sun)</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>const dirLight = new THREE.DirectionalLight(0xffffff, 1);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>dirLight.position.set(10, 20, 5);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>dirLight.castShadow = true;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>dirLight.receiveShadow = true;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>dirLight.shadow.mapSize.width = 1024;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>dirLight.shadow.mapSize.height = 1024;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>dirLight.shadow.camera.near = 0.5;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>dirLight.shadow.camera.far = 40;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>dirLight.shadow.camera.left = -15;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>dirLight.shadow.camera.right = 15;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>dirLight.shadow.camera.top = 15;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>dirLight.shadow.camera.bottom = -15;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>scene.add(dirLight);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>// Fill light from below</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>const fillLight = new THREE.PointLight(0x4466cc, 0.3);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>fillLight.position.set(5, 3, 5);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>scene.add(fillLight);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>// Warm back light</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>const backLight = new THREE.PointLight(0xffaa66, 0.4);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>backLight.position.set(-3, 5, -5);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>scene.add(backLight);</span></p>
-<p class="p7"><span class="s2"><span class="Apple-converted-space">        </span></span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>// Helper: ground grid</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>const gridHelper = new THREE.GridHelper(60, 20, 0x88aaff, 0x335588);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>gridHelper.position.y = -0.05;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>gridHelper.material.transparent = true;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>gridHelper.material.opacity = 0.5;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>scene.add(gridHelper);</span></p>
-<p class="p7"><span class="s2"></span><br></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>// Optional: simple ground plane (transparent but receives shadows)</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>const groundPlane = new THREE.Mesh(</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>new THREE.PlaneGeometry(45, 35),</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>new THREE.ShadowMaterial({ opacity: 0.4, color: 0x000000, transparent: true, side: THREE.DoubleSide })</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>groundPlane.rotation.x = -Math.PI / 2;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>groundPlane.position.y = -0.04;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>groundPlane.receiveShadow = true;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>scene.add(groundPlane);</span></p>
-<p class="p7"><span class="s2"></span><br></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>// --- Helper function to create a labeled room ---</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>function addRoom(x, z, width, depth, height, color, name, yOffset = 0) {</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>const geometry = new THREE.BoxGeometry(width, height, depth);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>const material = new THREE.MeshStandardMaterial({ color: color, roughness: 0.4, metalness: 0.1, transparent: true, opacity: 0.85 });</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>const cube = new THREE.Mesh(geometry, material);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>cube.position.set(x, height/2 + yOffset, z);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>cube.castShadow = true;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>cube.receiveShadow = true;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>scene.add(cube);</span></p>
-<p class="p7"><span class="s2"><span class="Apple-converted-space">            </span></span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>// Edges outline</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>const edgesGeo = new THREE.EdgesGeometry(geometry);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>const edgesMat = new THREE.LineBasicMaterial({ color: 0xffffff });</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>const wireframe = new THREE.LineSegments(edgesGeo, edgesMat);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>wireframe.position.copy(cube.position);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>scene.add(wireframe);</span></p>
-<p class="p7"><span class="s2"><span class="Apple-converted-space">            </span></span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>// CSS2D Text label</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>const div = document.createElement('div');</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>div.textContent = name;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>div.style.color = '#fff';</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>div.style.fontSize = '16px';</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>div.style.fontWeight = 'bold';</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>div.style.textShadow = '1px 1px 0px black';</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>div.style.backgroundColor = 'rgba(0,0,0,0.6)';</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>div.style.padding = '4px 10px';</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>div.style.borderRadius = '20px';</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>div.style.border = '1px solid rgba(255,255,255,0.3)';</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>div.style.whiteSpace = 'nowrap';</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>const label = new CSS2DObject(div);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>label.position.set(x, height + 0.2 + yOffset, z);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>scene.add(label);</span></p>
-<p class="p7"><span class="s2"><span class="Apple-converted-space">            </span></span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>return cube;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p7"><span class="s2"></span><br></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>function addFlatArea(x, z, width, depth, color, name, yLevel = 0.02) {</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>const geometry = new THREE.BoxGeometry(width, 0.05, depth);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>const material = new THREE.MeshStandardMaterial({ color: color, roughness: 0.6, metalness: 0.05 });</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>const plate = new THREE.Mesh(geometry, material);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>plate.position.set(x, yLevel, z);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>plate.receiveShadow = true;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>plate.castShadow = false;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>scene.add(plate);</span></p>
-<p class="p7"><span class="s2"><span class="Apple-converted-space">            </span></span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>const div = document.createElement('div');</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>div.textContent = name;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>div.style.color = '#eee';</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>div.style.fontSize = '14px';</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>div.style.backgroundColor = 'rgba(0,0,0,0.5)';</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>div.style.padding = '2px 8px';</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>div.style.borderRadius = '12px';</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>const label = new CSS2DObject(div);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>label.position.set(x, 0.25, z);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>scene.add(label);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p7"><span class="s2"><span class="Apple-converted-space">        </span></span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>// --- Define positions (X, Z) ---</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>// Badminton Court 1: 14 x 6 (width along X = 14, depth along Z = 6)</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>addFlatArea(0, 0, 14, 6, 0x5a7d9a, "🏸 Badminton Court 1\n14 x 6 m", 0.03);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>// Badminton Court 2: 14 x 5.5</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>addFlatArea(0, -7.5, 14, 5.5, 0x4e6b8a, "🏸 Badminton Court 2\n14 x 5.5 m", 0.03);</span></p>
-<p class="p7"><span class="s2"><span class="Apple-converted-space">        </span></span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>// Meeting Room 1: 200 m² -&gt; approximate 14.14 x 14.14, but to fit layout we make 16 x 12.5 = 200</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>addFlatArea(10, 5.5, 16, 12.5, 0x8fa68f, "🪑 Meeting Room 1\n200 m²", 0.04);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>// Meeting Room 2: 50 m² -&gt; 7 x 7.14</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>addFlatArea(10, -2, 7, 7.14, 0x7c9e7c, "🪑 Meeting Room 2\n50 m²", 0.04);</span></p>
-<p class="p7"><span class="s2"><span class="Apple-converted-space">        </span></span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>// Dance Room 1: 55 m² -&gt; 7.5 x 7.33</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>addFlatArea(-7, 6, 7.5, 7.33, 0xb87c7c, "💃 Dance Room 1\n55 m²", 0.04);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>// Dance Room 2: 55 m² -&gt; same size</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>addFlatArea(-7, -1.5, 7.5, 7.33, 0xb87c7c, "💃 Dance Room 2\n55 m²", 0.04);</span></p>
-<p class="p7"><span class="s2"><span class="Apple-converted-space">        </span></span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>// Office Room (assumed 5x5)</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>addFlatArea(-7, -8, 5, 5, 0xc9ae74, "📋 Office Room", 0.04);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>// Reception (assumed 5x4)</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>addFlatArea(-1, -8.5, 5, 4, 0xc9ae74, "📋 Reception", 0.04);</span></p>
-<p class="p7"><span class="s2"><span class="Apple-converted-space">        </span></span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>// --- Outside Parking for 15 cars (visual representation: 15 small rectangles + asphalt)</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>const parkingXStart = -5;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>const parkingZStart = 10.5;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>const carWidth = 0.8;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>const carLength = 1.6;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>const spacing = 0.2;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>for (let i = 0; i &lt; 15; i++) {</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>const row = Math.floor(i / 5);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>const col = i % 5;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>const carX = parkingXStart + col * (carWidth + spacing);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>const carZ = parkingZStart + row * (carLength + spacing);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>const carGeo = new THREE.BoxGeometry(carWidth, 0.2, carLength);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>const carMat = new THREE.MeshStandardMaterial({ color: 0x88aadd, metalness: 0.7, roughness: 0.3 });</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>const carMesh = new THREE.Mesh(carGeo, carMat);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>carMesh.position.set(carX, 0.1, carZ);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>carMesh.castShadow = true;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>scene.add(carMesh);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>// Parking lot base</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>const parkingLot = new THREE.Mesh(</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>new THREE.BoxGeometry(6.5, 0.05, 7.5),</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>new THREE.MeshStandardMaterial({ color: 0x4a5b6e, roughness: 0.8 })</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>parkingLot.position.set(-1.5, 0, 12.5);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>parkingLot.receiveShadow = true;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>scene.add(parkingLot);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>addFlatArea(-1.5, 12.5, 6.5, 7.5, 0x4a5b6e, "🚗 Outside Parking (15 cars)", 0.08);</span></p>
-<p class="p7"><span class="s2"><span class="Apple-converted-space">        </span></span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>// --- Add some simple walls / boundaries? Optional but gives context ---</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>// Put a surrounding low wall or just leave open.</span></p>
-<p class="p7"><span class="s2"><span class="Apple-converted-space">        </span></span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>// Add a simple ground indicator for main building area</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>const buildingBase = new THREE.Mesh(</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>new THREE.PlaneGeometry(28, 22),</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>new THREE.MeshStandardMaterial({ color: 0x2c3e4e, side: THREE.DoubleSide, transparent: true, opacity: 0.2 })</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>buildingBase.rotation.x = -Math.PI/2;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>buildingBase.position.y = -0.03;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>buildingBase.receiveShadow = false;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>scene.add(buildingBase);</span></p>
-<p class="p7"><span class="s2"><span class="Apple-converted-space">        </span></span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>// --- Decorative elements: trees or simple columns ---</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>const treeMat = new THREE.MeshStandardMaterial({ color: 0x5c9e5e });</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>const trunkMat = new THREE.MeshStandardMaterial({ color: 0x8b5a2b });</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>function addTree(x, z) {</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>const trunk = new THREE.Mesh(new THREE.CylinderGeometry(0.3, 0.4, 0.8, 6), trunkMat);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>trunk.position.set(x, 0.4, z);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>trunk.castShadow = true;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>const foliage = new THREE.Mesh(new THREE.ConeGeometry(0.6, 0.9, 8), treeMat);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>foliage.position.set(x, 0.9, z);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>foliage.castShadow = true;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>scene.add(trunk);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>scene.add(foliage);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>addTree(7, 13);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>addTree(9.5, 13);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>addTree(12, 13);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>addTree(-8, 12);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>addTree(-10, 9);</span></p>
-<p class="p7"><span class="s2"><span class="Apple-converted-space">        </span></span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>// --- Simple animated helper to orient camera initially ---</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>setTimeout(() =&gt; {</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>camera.position.set(20, 14, 18);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>controls.target.set(2, 1, 2);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>controls.update();</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>}, 100);</span></p>
-<p class="p7"><span class="s2"><span class="Apple-converted-space">        </span></span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>// --- Animation Loop ---</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>function animate() {</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>requestAnimationFrame(animate);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>controls.update(); // update if user interacts</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>renderer.render(scene, camera);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>labelRenderer.render(scene, camera);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>animate();</span></p>
-<p class="p7"><span class="s2"><span class="Apple-converted-space">        </span></span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>// Handle window resize</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>window.addEventListener('resize', onWindowResize, false);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>function onWindowResize() {</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>camera.aspect = window.innerWidth / window.innerHeight;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>camera.updateProjectionMatrix();</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>renderer.setSize(window.innerWidth, window.innerHeight);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">            </span>labelRenderer.setSize(window.innerWidth, window.innerHeight);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p7"><span class="s2"><span class="Apple-converted-space">        </span></span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span>console.log('3D facility ready');</span></p>
-<p class="p3"><span class="s6"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s2">script</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s3">&lt;/</span><span class="s2">body</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s3">&lt;/</span><span class="s2">html</span><span class="s3">&gt;</span></p>
+
+    <div id="info">
+
+        <strong>🏢 Facility 3D Layout</strong><br>
+
+        🏸 Badminton Court 1 (14x6m) | 🏸 Court 2 (14x5.5m)<br>
+
+        🪑 Meeting Room 1 (200m²) | 🪑 Meeting Room 2 (50m²)<br>
+
+        💃 Dance Room 1 & 2 (55m² each) | 🏢 Office | 📋 Reception<br>
+
+        🚗 Outside Parking (15 cars)
+
+    </div>
+
+    <div id="controls-note">
+
+        🖱️ Drag to rotate | Right‑click + drag to pan | Scroll to zoom
+
+    </div>
+
+
+
+    <!-- Import Three.js core and add-ons from CDN -->
+
+    <script type="importmap">
+
+        {
+
+            "imports": {
+
+                "three": "https://unpkg.com/three@0.128.0/build/three.module.js",
+
+                "three/addons/": "https://unpkg.com/three@0.128.0/examples/jsm/"
+
+            }
+
+        }
+
+    </script>
+
+
+
+    <script type="module">
+
+        import * as THREE from 'three';
+
+        import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+        import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
+
+
+
+        // --- Setup Scene, Cameras, Renderers ---
+
+        const scene = new THREE.Scene();
+
+        scene.background = new THREE.Color(0x111122);
+
+        scene.fog = new THREE.FogExp2(0x111122, 0.008);
+
+
+
+        // Perspective camera
+
+        const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+        camera.position.set(25, 18, 28);
+
+        camera.lookAt(5, 0, 5);
+
+
+
+        // WebGL renderer
+
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+
+        renderer.setSize(window.innerWidth, window.innerHeight);
+
+        renderer.shadowMap.enabled = true; // enable shadows
+
+        renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+        document.body.appendChild(renderer.domElement);
+
+
+
+        // CSS2 renderer for text labels
+
+        const labelRenderer = new CSS2DRenderer();
+
+        labelRenderer.setSize(window.innerWidth, window.innerHeight);
+
+        labelRenderer.domElement.style.position = 'absolute';
+
+        labelRenderer.domElement.style.top = '0px';
+
+        labelRenderer.domElement.style.left = '0px';
+
+        labelRenderer.domElement.style.pointerEvents = 'none';
+
+        document.body.appendChild(labelRenderer.domElement);
+
+
+
+        // --- Controls ---
+
+        const controls = new OrbitControls(camera, renderer.domElement);
+
+        controls.enableDamping = true;
+
+        controls.dampingFactor = 0.05;
+
+        controls.rotateSpeed = 1.0;
+
+        controls.zoomSpeed = 1.2;
+
+        controls.panSpeed = 0.8;
+
+        controls.target.set(8, 1, 6);
+
+
+
+        // --- Lighting ---
+
+        // Ambient light
+
+        const ambientLight = new THREE.AmbientLight(0x404060);
+
+        scene.add(ambientLight);
+
+        // Main directional light (sun)
+
+        const dirLight = new THREE.DirectionalLight(0xffffff, 1);
+
+        dirLight.position.set(10, 20, 5);
+
+        dirLight.castShadow = true;
+
+        dirLight.receiveShadow = true;
+
+        dirLight.shadow.mapSize.width = 1024;
+
+        dirLight.shadow.mapSize.height = 1024;
+
+        dirLight.shadow.camera.near = 0.5;
+
+        dirLight.shadow.camera.far = 40;
+
+        dirLight.shadow.camera.left = -15;
+
+        dirLight.shadow.camera.right = 15;
+
+        dirLight.shadow.camera.top = 15;
+
+        dirLight.shadow.camera.bottom = -15;
+
+        scene.add(dirLight);
+
+        // Fill light from below
+
+        const fillLight = new THREE.PointLight(0x4466cc, 0.3);
+
+        fillLight.position.set(5, 3, 5);
+
+        scene.add(fillLight);
+
+        // Warm back light
+
+        const backLight = new THREE.PointLight(0xffaa66, 0.4);
+
+        backLight.position.set(-3, 5, -5);
+
+        scene.add(backLight);
+
+        
+
+        // Helper: ground grid
+
+        const gridHelper = new THREE.GridHelper(60, 20, 0x88aaff, 0x335588);
+
+        gridHelper.position.y = -0.05;
+
+        gridHelper.material.transparent = true;
+
+        gridHelper.material.opacity = 0.5;
+
+        scene.add(gridHelper);
+
+
+
+        // Optional: simple ground plane (transparent but receives shadows)
+
+        const groundPlane = new THREE.Mesh(
+
+            new THREE.PlaneGeometry(45, 35),
+
+            new THREE.ShadowMaterial({ opacity: 0.4, color: 0x000000, transparent: true, side: THREE.DoubleSide })
+
+        );
+
+        groundPlane.rotation.x = -Math.PI / 2;
+
+        groundPlane.position.y = -0.04;
+
+        groundPlane.receiveShadow = true;
+
+        scene.add(groundPlane);
+
+
+
+        // --- Helper function to create a labeled room ---
+
+        function addRoom(x, z, width, depth, height, color, name, yOffset = 0) {
+
+            const geometry = new THREE.BoxGeometry(width, height, depth);
+
+            const material = new THREE.MeshStandardMaterial({ color: color, roughness: 0.4, metalness: 0.1, transparent: true, opacity: 0.85 });
+
+            const cube = new THREE.Mesh(geometry, material);
+
+            cube.position.set(x, height/2 + yOffset, z);
+
+            cube.castShadow = true;
+
+            cube.receiveShadow = true;
+
+            scene.add(cube);
+
+            
+
+            // Edges outline
+
+            const edgesGeo = new THREE.EdgesGeometry(geometry);
+
+            const edgesMat = new THREE.LineBasicMaterial({ color: 0xffffff });
+
+            const wireframe = new THREE.LineSegments(edgesGeo, edgesMat);
+
+            wireframe.position.copy(cube.position);
+
+            scene.add(wireframe);
+
+            
+
+            // CSS2D Text label
+
+            const div = document.createElement('div');
+
+            div.textContent = name;
+
+            div.style.color = '#fff';
+
+            div.style.fontSize = '16px';
+
+            div.style.fontWeight = 'bold';
+
+            div.style.textShadow = '1px 1px 0px black';
+
+            div.style.backgroundColor = 'rgba(0,0,0,0.6)';
+
+            div.style.padding = '4px 10px';
+
+            div.style.borderRadius = '20px';
+
+            div.style.border = '1px solid rgba(255,255,255,0.3)';
+
+            div.style.whiteSpace = 'nowrap';
+
+            const label = new CSS2DObject(div);
+
+            label.position.set(x, height + 0.2 + yOffset, z);
+
+            scene.add(label);
+
+            
+
+            return cube;
+
+        }
+
+
+
+        function addFlatArea(x, z, width, depth, color, name, yLevel = 0.02) {
+
+            const geometry = new THREE.BoxGeometry(width, 0.05, depth);
+
+            const material = new THREE.MeshStandardMaterial({ color: color, roughness: 0.6, metalness: 0.05 });
+
+            const plate = new THREE.Mesh(geometry, material);
+
+            plate.position.set(x, yLevel, z);
+
+            plate.receiveShadow = true;
+
+            plate.castShadow = false;
+
+            scene.add(plate);
+
+            
+
+            const div = document.createElement('div');
+
+            div.textContent = name;
+
+            div.style.color = '#eee';
+
+            div.style.fontSize = '14px';
+
+            div.style.backgroundColor = 'rgba(0,0,0,0.5)';
+
+            div.style.padding = '2px 8px';
+
+            div.style.borderRadius = '12px';
+
+            const label = new CSS2DObject(div);
+
+            label.position.set(x, 0.25, z);
+
+            scene.add(label);
+
+        }
+
+        
+
+        // --- Define positions (X, Z) ---
+
+        // Badminton Court 1: 14 x 6 (width along X = 14, depth along Z = 6)
+
+        addFlatArea(0, 0, 14, 6, 0x5a7d9a, "🏸 Badminton Court 1\n14 x 6 m", 0.03);
+
+        // Badminton Court 2: 14 x 5.5
+
+        addFlatArea(0, -7.5, 14, 5.5, 0x4e6b8a, "🏸 Badminton Court 2\n14 x 5.5 m", 0.03);
+
+        
+
+        // Meeting Room 1: 200 m² -> approximate 14.14 x 14.14, but to fit layout we make 16 x 12.5 = 200
+
+        addFlatArea(10, 5.5, 16, 12.5, 0x8fa68f, "🪑 Meeting Room 1\n200 m²", 0.04);
+
+        // Meeting Room 2: 50 m² -> 7 x 7.14
+
+        addFlatArea(10, -2, 7, 7.14, 0x7c9e7c, "🪑 Meeting Room 2\n50 m²", 0.04);
+
+        
+
+        // Dance Room 1: 55 m² -> 7.5 x 7.33
+
+        addFlatArea(-7, 6, 7.5, 7.33, 0xb87c7c, "💃 Dance Room 1\n55 m²", 0.04);
+
+        // Dance Room 2: 55 m² -> same size
+
+        addFlatArea(-7, -1.5, 7.5, 7.33, 0xb87c7c, "💃 Dance Room 2\n55 m²", 0.04);
+
+        
+
+        // Office Room (assumed 5x5)
+
+        addFlatArea(-7, -8, 5, 5, 0xc9ae74, "📋 Office Room", 0.04);
+
+        // Reception (assumed 5x4)
+
+        addFlatArea(-1, -8.5, 5, 4, 0xc9ae74, "📋 Reception", 0.04);
+
+        
+
+        // --- Outside Parking for 15 cars (visual representation: 15 small rectangles + asphalt)
+
+        const parkingXStart = -5;
+
+        const parkingZStart = 10.5;
+
+        const carWidth = 0.8;
+
+        const carLength = 1.6;
+
+        const spacing = 0.2;
+
+        for (let i = 0; i < 15; i++) {
+
+            const row = Math.floor(i / 5);
+
+            const col = i % 5;
+
+            const carX = parkingXStart + col * (carWidth + spacing);
+
+            const carZ = parkingZStart + row * (carLength + spacing);
+
+            const carGeo = new THREE.BoxGeometry(carWidth, 0.2, carLength);
+
+            const carMat = new THREE.MeshStandardMaterial({ color: 0x88aadd, metalness: 0.7, roughness: 0.3 });
+
+            const carMesh = new THREE.Mesh(carGeo, carMat);
+
+            carMesh.position.set(carX, 0.1, carZ);
+
+            carMesh.castShadow = true;
+
+            scene.add(carMesh);
+
+        }
+
+        // Parking lot base
+
+        const parkingLot = new THREE.Mesh(
+
+            new THREE.BoxGeometry(6.5, 0.05, 7.5),
+
+            new THREE.MeshStandardMaterial({ color: 0x4a5b6e, roughness: 0.8 })
+
+        );
+
+        parkingLot.position.set(-1.5, 0, 12.5);
+
+        parkingLot.receiveShadow = true;
+
+        scene.add(parkingLot);
+
+        addFlatArea(-1.5, 12.5, 6.5, 7.5, 0x4a5b6e, "🚗 Outside Parking (15 cars)", 0.08);
+
+        
+
+        // --- Add some simple walls / boundaries? Optional but gives context ---
+
+        // Put a surrounding low wall or just leave open.
+
+        
+
+        // Add a simple ground indicator for main building area
+
+        const buildingBase = new THREE.Mesh(
+
+            new THREE.PlaneGeometry(28, 22),
+
+            new THREE.MeshStandardMaterial({ color: 0x2c3e4e, side: THREE.DoubleSide, transparent: true, opacity: 0.2 })
+
+        );
+
+        buildingBase.rotation.x = -Math.PI/2;
+
+        buildingBase.position.y = -0.03;
+
+        buildingBase.receiveShadow = false;
+
+        scene.add(buildingBase);
+
+        
+
+        // --- Decorative elements: trees or simple columns ---
+
+        const treeMat = new THREE.MeshStandardMaterial({ color: 0x5c9e5e });
+
+        const trunkMat = new THREE.MeshStandardMaterial({ color: 0x8b5a2b });
+
+        function addTree(x, z) {
+
+            const trunk = new THREE.Mesh(new THREE.CylinderGeometry(0.3, 0.4, 0.8, 6), trunkMat);
+
+            trunk.position.set(x, 0.4, z);
+
+            trunk.castShadow = true;
+
+            const foliage = new THREE.Mesh(new THREE.ConeGeometry(0.6, 0.9, 8), treeMat);
+
+            foliage.position.set(x, 0.9, z);
+
+            foliage.castShadow = true;
+
+            scene.add(trunk);
+
+            scene.add(foliage);
+
+        }
+
+        addTree(7, 13);
+
+        addTree(9.5, 13);
+
+        addTree(12, 13);
+
+        addTree(-8, 12);
+
+        addTree(-10, 9);
+
+        
+
+        // --- Simple animated helper to orient camera initially ---
+
+        setTimeout(() => {
+
+            camera.position.set(20, 14, 18);
+
+            controls.target.set(2, 1, 2);
+
+            controls.update();
+
+        }, 100);
+
+        
+
+        // --- Animation Loop ---
+
+        function animate() {
+
+            requestAnimationFrame(animate);
+
+            controls.update(); // update if user interacts
+
+            renderer.render(scene, camera);
+
+            labelRenderer.render(scene, camera);
+
+        }
+
+        animate();
+
+        
+
+        // Handle window resize
+
+        window.addEventListener('resize', onWindowResize, false);
+
+        function onWindowResize() {
+
+            camera.aspect = window.innerWidth / window.innerHeight;
+
+            camera.updateProjectionMatrix();
+
+            renderer.setSize(window.innerWidth, window.innerHeight);
+
+            labelRenderer.setSize(window.innerWidth, window.innerHeight);
+
+        }
+
+        
+
+        console.log('3D facility ready');
+
+    </script>
+
 </body>
+
 </html>
